@@ -1,14 +1,20 @@
-import dohnut from "./DoughnutMaker.js";
+import dohnutClass from "./DoughnutMaker.js";
 
 const numberOfEl = document.querySelector("#numberOf");
 const statusEl = document.querySelector("#status")
-const dohnutz = new dohnut(100);
+const dohnutz = new dohnutClass(100);
 
 statusEl.innerText = dohnutz.getStatus();
 
 const makeBtn = document.querySelector("#make");
 makeBtn.addEventListener("click", ()=> {
     dohnutz.make();
+    statusEl.innerText = dohnutz.getStatus();
+})
+
+const resetBtn = document.querySelector("#reset");
+resetBtn.addEventListener("click",()=>{
+    dohnutz.reset(),
     statusEl.innerText = dohnutz.getStatus();
 })
 
@@ -35,7 +41,8 @@ autoBtn2.addEventListener("click",()=>{
         dohnutz._multiCost *= 1.2;
         dohnutz._clickValue *= 1.2;
         dohnutz._numOfMulti ++;
-        dohnutz.getStatus();
+        statusEl.innerText = dohnutz.getStatus();
         } 
         else{alert("My Breh, You Broke AF")
         }})
+
