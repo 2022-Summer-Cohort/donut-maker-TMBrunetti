@@ -2,7 +2,7 @@ import dohnutClass from "./DoughnutMaker.js";
 
 const numberOfEl = document.querySelector("#numberOf");
 const statusEl = document.querySelector("#status")
-const dohnutz = new dohnutClass(100);
+const dohnutz = new dohnutClass(400);
 
 statusEl.innerText = dohnutz.getStatus();
 
@@ -11,13 +11,6 @@ makeBtn.addEventListener("click", ()=> {
     dohnutz.make();
     statusEl.innerText = dohnutz.getStatus();
 })
-
-const resetBtn = document.querySelector("#reset");
-resetBtn.addEventListener("click",()=>{
-    dohnutz.reset(),
-    statusEl.innerText = dohnutz.getStatus();
-})
-
 
 const autoBtn1 = document.querySelector("#auto");
 autoBtn1.addEventListener("click",()=>{ 
@@ -45,4 +38,10 @@ autoBtn2.addEventListener("click",()=>{
         } 
         else{alert("My Breh, You Broke AF")
         }})
+
+ const resetBtn = document.querySelector("#reset");
+resetBtn.addEventListener("click",()=>{
+        dohnutz.reset(),
+        statusEl.innerText = dohnutz.getStatus();
+        })
 

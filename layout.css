@@ -1,28 +1,27 @@
-.parent {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+.container {
+    height: 100vh;
+    width: 100vw
     }
-    
-    .divHeader { grid-area: 1 / 1 / 2 / 2; }
-    .divApplication { grid-area: 2 / 1 / 3 / 2; }
 
-
-
-    .parent2 {
-        display: grid;
+    .header { 
+        width:100vw;
+        height:20vh;
+        
+    }
+    .parent {
+        display: flex;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
         }
         
-        .divStatus { grid-area: 1 / 1 / 2 / 2; }
-        .divStatus{ 
+        .div1 { grid-area: 1 / 1 / 2 / 2; 
             text-align: center;
-            
         }
-        .divGame { grid-area: 1 / 2 / 2 / 3; }
+        .div2 { grid-area: 1 / 2 / 2 / 3; 
+            text-align: center;    
+        }

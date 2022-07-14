@@ -30,12 +30,13 @@ class dohnutClass{
     }
 
     reset(){
-        this._numberOf = 0,
-        this._numOfMulti = 0,
-        this._clickValue = 1,
-        this._numOfAuto = 0,
-        this._multiCost = 10,
-        this._autoCost = 100
+        location.reload();
+        // this._numberOf = 0,
+        // this._numOfMulti = 0,
+        // this._clickValue = 1,
+        // this._numOfAuto = 0,
+        // this._multiCost = 10,
+        // this._autoCost = 100
     }
 
 
