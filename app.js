@@ -2,14 +2,19 @@ import dohnutClass from "./DoughnutMaker.js";
 
 const numberOfEl = document.querySelector("#numberOf");
 const statusEl = document.querySelector("#status")
-const dohnutz = new dohnutClass(400);
+const dohnutz = new dohnutClass(0);
 
 statusEl.innerText = dohnutz.getStatus();
+
+
 
 const makeBtn = document.querySelector("#make");
 makeBtn.addEventListener("click", ()=> {
     dohnutz.make();
+    disableAuto();
+    disableMulti()
     statusEl.innerText = dohnutz.getStatus();
+
 })
 
 const autoBtn1 = document.querySelector("#auto");
@@ -21,11 +26,20 @@ autoBtn1.addEventListener("click",()=>{
     dohnutz._numOfAuto ++;
     setInterval(()=>{
         dohnutz.make();
+        disableAuto();
+        disableMulti()
         dohnutz._autoCost= Math.round(dohnutz._autoCost);
         statusEl.innerText = dohnutz.getStatus();
     },1000);} 
     else{alert("Not Enuff Fundz Mah Dude")
     }})
+
+function disableAuto(){
+if(dohnutz.numberOf >= dohnutz._autoCost){
+    autoBtn1.removeAttribute("disabled")
+}else {
+    autoBtn1.setAttribute("disabled", "disabled")
+};}
 
 const autoBtn2 = document.querySelector("#multi");
 autoBtn2.addEventListener("click",()=>{ 
@@ -35,9 +49,18 @@ autoBtn2.addEventListener("click",()=>{
         dohnutz._clickValue *= 1.2;
         dohnutz._numOfMulti ++;
         statusEl.innerText = dohnutz.getStatus();
+        disableAuto();
+        disableMulti()
         } 
         else{alert("My Breh, You Broke AF")
         }})
+
+function disableMulti(){
+if(dohnutz.numberOf >= dohnutz._multiCost){
+    autoBtn2.removeAttribute("disabled")
+}else {
+    autoBtn2.setAttribute("disabled", "disabled")
+};}
 
  const resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click",()=>{
