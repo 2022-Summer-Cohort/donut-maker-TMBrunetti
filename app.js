@@ -68,3 +68,6 @@ resetBtn.addEventListener("click",()=>{
         statusEl.innerText = dohnutz.getStatus();
         })
 
+// const statusEl = document.createElement("p");
+// statusEl.innerText = dohnutClass;
+// statusEl.classList.add("dohnutClass")

@@ -3,9 +3,13 @@
     color: rgb(255, 255, 255);
     text-align: center;
 }
-  
 
 
+
+.dohnutClass{
+  color: #11caea;
+  background-color: black;
+} 
   
   .container{
     background-image:url(orange\ sprinkle\ background.jpg);
@@ -51,6 +55,8 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+  z-index: 20;
+  box-shadow: 0px 0px 3px 5px black;
 }
 
 .dropdown:hover .dropbtn {
@@ -64,7 +70,7 @@
 #make{
   border-radius: 20%;
   border: 2px solid rgb(255, 4, 222);
-  padding:1rem
+  padding:1rem;
 }
 
 #auto{

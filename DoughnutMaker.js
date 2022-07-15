@@ -8,6 +8,8 @@ class dohnutClass{
         this._numOfMulti = 0;
     }
 
+    dohnutClass
+
     get numberOf() {
         return this._numberOf
     }
